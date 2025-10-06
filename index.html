@@ -47,13 +47,13 @@
             <dt>Role</dt>
             <dd>Computes binaries to run the OS, apps, game logic.</dd>
             <dt>Key Specs</dt>
-            <dd>Cores/Threads, Base/Boost clocks, Cache, TDP.</dd>
+            <dd>Cores/Threads|Base/Boost clocks|Cache|TDP.</dd>
             <dt>Examples</dt>
-            <dd>AMD Ryzen 5 5600 | Intel Core i5-12400F</dd>
+            <dd>AMD Ryzen 5 5600|Intel Core i5-12400F</dd>
             <dt>iGPU</dt>
-            <dd>Integrated graphics on some CPUs (Intel UHD, AMD Vega)</dd>
+            <dd>Integrated graphics on some CPUs (Intel UHD|AMD Vega)</dd>
             <dt>Overclocking</dt>
-            <dd>Unlocked models (AMD X, Intel K) can be overclocked via BIOS or software, requires good cooling</dd>
+            <dd>Unlocked models (AMD X|Intel K) can be overclocked via BIOS or software, requires good cooling</dd>
             <dt>Thermals</dt>
             <dd>Keep under sustained limits for best performance</dd>
             <dt>Socket</dt>
@@ -66,11 +66,19 @@
             loading="lazy" width="800" height="450">
           <dl class="spec">
             <dt>Socket</dt>
-            <dd>AMX / LGAXXXX (CPU must match MB socket)</dd>
+            <dd>AMX/LGAXXXX (CPU must match MB socket)</dd>
             <dt>Use-Cases</dt>
-            <dd>Productivity, gaming, compiling, streaming.</dd>
+            <dd>Productivity|gaming|compiling|streaming.</dd>
             <dt>Bottlenecks</dt>
             <dd>Pair appropriately with GPU to avoid CPU-bound frames.</dd>
+            <dt>Cooling</dt>
+            <dd>Stock coolers for non-overclocked; aftermarket for better thermals/noise</dd>
+            <dt>Thermal Paste</dt>
+            <dd>Improves heat transfer between CPU and cooler, liquid metal is better but conductive</dd>
+            <dt>Installation</dt>
+            <dd>Align triangle markers, secure lever, apply paste, mount cooler firmly</dd>
+            <dt>Thermal paste application</dt>
+            <dd>Pea-sized dot in center or thin line, spreads under pressure; avoid excess, <br>sometimes an X shape can be adivced</dd>
           </dl>
         </article>
       </div>
@@ -93,12 +101,15 @@
             <dd>4GB minimum for 1080p, 8GB+ for 1440p, 10-12GB+ for 4K</dd>
             <dt>PCIe</dt>
             <dd>Typically x16 slot, Gen3/4/5 (backward compatible)</dd>
+            <dt>Legacy</dt>
+            <dd>AGP (old), PCIe x1 (low-end)</dd>
             <dt>Cooling</dt>
             <dd>Air (blower/tower) or Liquid (AIO/custom)</dd>
             <dt>Power</dt>
             <dd>6-pin/8-pin/12VHPWR connectors; check PSU requirements.</dd>
             <dd>Overvolting & Undervolting</dd>
-            <dd>Can improve performance and lifespan, overvolting can allow higher clockspeeds, on spesific models but may void warranty</dd>
+            <dd>Can improve performance and lifespan, <br>overvolting can allow higher clockspeeds, on spesific models but
+              may void warranty</dd>
           </dl>
         </article>
         <article class="card">
@@ -133,7 +144,7 @@
             height="450">
           <dl class="spec">
             <dt>Type</dt>
-            <dd>DDR3 / DDR4 / DDR5</dd>
+            <dd>DDR3|DDR4|DDR5</dd>
             <dt>Capacity</dt>
             <dd>Typical 16-32GB for gaming/media creation 64-128GB for Workstations</dd>
             <dt>Speed</dt>
@@ -145,8 +156,9 @@
             <dt>ECC</dt>
             <dd>Error-Correcting Code for workstations/servers</dd>
             <dt>SO-DIMM</dt>
-            <dd>Laptop/compact form factor</dd>
-            <dt>Voltage</dt><dd> DDR3L: 1.35 V|DDR3U: 1.25 V|DDR4: 1.2 V|DDR5: 1.1 V</dd>
+            <dd>Laptop|compact form factor</dd>
+            <dt>Voltage</dt>
+            <dd> DDR3L: 1.35 V|DDR3U: 1.25 V|DDR4: 1.2 V|DDR5: 1.1 V</dd>
           </dl>
         </article>
         <article class="card">
@@ -181,7 +193,7 @@
             <dt>Socket</dt>
             <dd>Must match CPU (AMX, LGAXXXX, etc.)</dd>
             <dt>Form Factors</dt>
-            <dd>ATX, mATX, ITX</dd>
+            <dd>ATX|mATX|ITX</dd>
           </dl>
         </article>
         <article class="card">
@@ -192,7 +204,8 @@
             <dt>PCIe</dt>
             <dd>x16 for GPU, x1/x4 for cards</dd>
             <dt>M.2</dt>
-            <dd>Can be NVMe or a Wi-Fi card, external dGPU's is possible using a Thunderbolt adapter which is can be found in
+            <dd>Can be NVMe or a Wi-Fi card, external dGPU's is possible using a Thunderbolt adapter which is can be
+              found in
               laptop mods</dd>
             <dt>Rear I/O</dt>
             <dd>PS-2|USB-C/A|Audio|2.5G LAN|Wi-Fi antennas</dd>
@@ -213,7 +226,7 @@
             <dt>SATA SSD/HDD</dt>
             <dd>Bulk storage & archives</dd>
             <dt>Best Practice</dt>
-            <dd>OS on NVMe + secondary drive for projects<br>|documents|images|videos|general|backups|games</dd>
+            <dd>OS on NVMe + secondary drive for Projects|Documents|Images|Videos|Backups|Games</dd>
           </dl>
         </article>
         <article class="card">
@@ -222,7 +235,9 @@
             loading="lazy" width="800" height="450">
           <dl class="spec">
             <dt>Local</dt>
-            <dd>External HDD/SSD, ZIP Disks, tape, NAS</dd>
+            <dd>External HDD/SSD|ZIP Disks|Tape|NAS</dd>
+            <dt>Cloud</dt>
+            <dd>Google Drive|OneDrive|iCloud|Dropbox</dd>
           </dl>
         </article>
       </div>
@@ -236,10 +251,10 @@
             width="800" height="450">
           <dl class="spec">
             <dt>CPU & GPU Coolers</dt>
-            <dd>Aircoolers, AIO liquid or custom liquid loop, depends on size, air is preferred but has higher idle
+            <dd>Aircoolers, AIO liquid or custom loop, depends on size, air is preferred but has higher idle
               temps. water coolers can sustain higher temps over lower time(Model brackets are CPU slot dependent)</dd>
-            <dt>Case Airflow</dt>
-            <dd>Front intake → rear/top exhaust, many configurations possible</dd>
+            <dt>GPU Heatsinks</dt>
+            <dd>Stock or aftermarket, some high-end GPUs have AIO options, custom loops are recommended</dd>
             <dt>Thermals</dt>
             <dd>Keep CPU/GPU under sustained limits for better performance and duration</dd>
           </dl>
@@ -253,6 +268,14 @@
             <dd>Balance noise vs temps, filters will insulate a little giving less noise but slightly more heat</dd>
             <dt>Dust</dt>
             <dd>Filters & periodic cleaning(For filter use brush, or wash with damp cloth/water)</dd>
+            <dt>Case Fans</dt>
+            <dd>Intake (front/bottom) & Exhaust (rear/top)</dd>
+            <dd>Positive pressure preferred to reduce dust</dd>
+            <dd>120mm/140mm common sizes, PWM for speed control</dd>
+            <dt>Fan Types</dt>
+            <dd>Hydraulic|Magnetic|Sleeve|Ball bearings (longer lifespan)<br>Static Pressure|Airflow</dd>
+            <dt>Case Airflow</dt>
+            <dd>Front intake → rear/top exhaust, many configurations possible</dd>
           </dl>
         </article>
       </div>
