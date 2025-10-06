@@ -42,7 +42,7 @@
           <h3>CPU (Processor)</h3>
           <img class="card-img" src="Images/cpu.jpg" alt="Close-up photo of a desktop CPU" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>Role</dt><dd>General-purpose compute; computes binaries to run the OS, apps, game logic.</dd>
+            <dt>Role</dt><dd>Computes binaries to run the OS, apps, game logic.</dd>
             <dt>Key Specs</dt><dd>Cores/Threads, Base/Boost clocks, Cache, TDP.</dd>
             <dt>Examples</dt><dd>AMD Ryzen 5 5600 | Intel Core i5-12400F</dd>
           </dl>
@@ -66,16 +66,25 @@
           <img class="card-img" src="Images/gpu.jpg" alt="Discrete graphics card with triple fans" loading="lazy" width="800" height="450">
           <dl class="spec">
             <dt>Role</dt><dd>Parallel processing for graphics, AI, compute.</dd>
-            <dt>Key Specs</dt><dd>VRAM, CUDA/Stream processors(Nvenc), Boost clock, TBP, SLI.</dd>
+            <dt>Key Specs</dt><dd>CUDA cores (NVIDIA)|Stream processors (AMD)|Tensor/RT cores|VRAM|boost clock|TBP.</dd>
             <dt>Examples</dt><dd>NVIDIA GTX/RTX/Quadro Series | AMD RX/Pro | iGPU (APU)</dd>
+            <dt>VRAM</dt><dd>4GB minimum for 1080p, 8GB+ for 1440p, 10-12GB+ for 4K</dd>
+            <dt>PCIe</dt><dd>Typically x16 slot, Gen3/4/5 (backward compatible)</dd>
+            <dt>Cooling</dt><dd>Air (blower/tower) or Liquid (AIO/custom)</dd>
+            <dt>Power</dt><dd>6-pin/8-pin/12VHPWR connectors; check PSU requirements.</dd>
           </dl>
         </article>
         <article class="card">
           <h3>Display Outputs</h3>
           <img class="card-img" src="Images/gpu-outputs.jpg" alt="GPU backplate showing HDMI and DisplayPort outputs" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>Common</dt><dd>HDMI 2.1, DisplayPort 1.4/2.1</dd>
+            <dt>Outputs</dt><dd>Composite|VGA|DVI|HDMI 2.1|DisplayPort 1.4/2.1</dd>
             <dt>Notes</dt><dd>Match refresh rate & resolution; <br>check PSU headroom and cable version.</dd>
+            <dt>Multi-GPU</dt><dd>SLI/CrossFire mostly deprecated, use single powerful GPU.</dd>
+            <dt>eGPU</dt><dd>External GPU via Thunderbolt 3/4 (laptop use)</dd>
+            <dt>Ray Tracing</dt><dd>Real-time lighting effects, requires RTX/Pro series or AMD RX 6000 series and up</dd>
+            <dt>DLSS/FSR</dt><dd>AI upscaling techniques for better performance</dd>
+            <dt>Overclock</dt><dd>Boost clocks via software or GPU BIOS mods, must monitor temps and stability</dd>
           </dl>
         </article>
       </div>
@@ -89,8 +98,13 @@
           <dl class="spec">
             <dt>Type</dt><dd>DDR3 / DDR4 / DDR5</dd>
             <dt>Capacity</dt><dd>Typical 16-32GB for gaming/media creation 64-128GB for Workstations</dd>
-            <dt>Speed</dt><dd>example DDR4-3200mhz, DDR5-6000mhz (check CPU compatibility)</dd>
-            <dt>Channels</dt><dd>Dual-channel (2 sticks) recommended for XMP/EXPO</dd>
+            <dt>Speed</dt><dd>example DDR4-3200mhz|DDR5-6000mhz (check CPU compatibility)</dd>
+            <dt>Channels</dt><dd>Dual-channel recommended</dd>
+            <dt>Slots</dt><dd>2 or 4 DIMM slots on most motherboards</dd>
+            <dt>ECC</dt><dd>Error-Correcting Code for workstations/servers</dd>
+            <dt>SO-DIMM</dt><dd>Laptop/compact form factor</dd>
+            <dt>Latency</dt><dd>CAS timings (lower is better, e.g. 16-18-18-36)</dd>
+            <dt>Voltage</dt><dd>1.2V (DDR4) / 1.1V (DDR5)</dd>
           </dl>
         </article>
         <article class="card">
@@ -98,7 +112,7 @@
           <img class="card-img" src="Images/ram-tuning.jpg" alt="BIOS screenshot for XMP/EXPO memory profile" loading="lazy" width="800" height="450">
           <dl class="spec">
             <dt>Profiles</dt><dd>XMP/EXPO for rated speeds</dd>
-            <dt>Latency</dt><dd>Lower CAS timing helps but stability first</dd>
+            <dt>Latency</dt><dd>Lower CAS timing helps but stability first, usually tighter timings faster memory but also depends on clockspeeds</dd>
           </dl>
         </article>
       </div>
@@ -120,8 +134,8 @@
           <img class="card-img" src="Images/expansion.jpg" alt="PCIe slots and M.2 heatsinks close-up" loading="lazy" width="800" height="450">
           <dl class="spec">
             <dt>PCIe</dt><dd>x16 for GPU, x1/x4 for cards</dd>
-            <dt>M.2</dt><dd>Can be NVMe or a Wi-Fi card, external dGPU's is possible on laptops using an adapter</dd>
-            <dt>Rear I/O</dt><dd>PS-2, USB-C/A, Audio, 2.5G LAN, Wi-Fi antennas</dd>
+            <dt>M.2</dt><dd>Can be NVMe or a Wi-Fi card, external dGPU's is possible using an adapter which is can be found in laptop mods</dd>
+            <dt>Rear I/O</dt><dd>PS-2|USB-C/A|Audio|2.5G LAN|Wi-Fi antennas</dd>
           </dl>
         </article>
       </div>
@@ -133,16 +147,16 @@
           <h3>Storage</h3>
           <img class="card-img" src="Images/storage.jpg" alt="NVMe SSD and 2.5-inch SATA SSD side by side" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>NVMe SSD</dt><dd>Fast OS/apps; PCIe Gen3/4/5</dd>
+            <dt>NVMe SSD</dt><dd>Faster startup and better loading times for OS, apps & games; PCIe Gen3/4/5</dd>
             <dt>SATA SSD/HDD</dt><dd>Bulk storage & archives</dd>
-            <dt>Best Practice</dt><dd>OS on NVMe + secondary drive for projects/documents/images/videos/general backups & games</dd>
+            <dt>Best Practice</dt><dd>OS on NVMe + secondary drive for projects|documents|images|videos|general|backups|games</dd>
           </dl>
         </article>
         <article class="card">
           <h3>Backup</h3>
           <img class="card-img" src="Images/backup.jpg" alt="External drive and NAS illustrating backup strategy" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>Local</dt><dd>External HDD/SSD, zIP Disks, tape, NAS</dd>
+            <dt>Local</dt><dd>External HDD/SSD, ZIP Disks, tape, NAS</dd>
           </dl>
         </article>
       </div>
@@ -154,7 +168,7 @@
           <h3>Cooling</h3>
           <img class="card-img" src="Images/cooling.jpg" alt="Tower air cooler mounted on CPU" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>CPU Coolers</dt><dd>Air (tower) or AIO liquid (CPU slot dependent)</dd>
+            <dt>CPU Coolers</dt><dd>Aircoolers, AIO liquid or custom liquid loop, depends on size, air is preferred but has higher idle temps. water coolers can sustain higher temps over lower time(Model brackets are CPU slot dependent)</dd>
             <dt>Case Airflow</dt><dd>Front intake → rear/top exhaust, many configurations possible</dd>
             <dt>Thermals</dt><dd>Keep CPU/GPU under sustained limits for better performance and duration</dd>
           </dl>
@@ -163,7 +177,7 @@
           <h3>Acoustics</h3>
           <img class="card-img" src="Images/acoustics.jpg" alt="Case fans for quiet airflow" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>Fan Curves</dt><dd>Balance noise vs temps</dd>
+            <dt>Fan Curves</dt><dd>Balance noise vs temps, filters will insulate a little giving less noise but slightly more heat</dd>
             <dt>Dust</dt><dd>Filters & periodic cleaning(For filter use brush, or wash with damp cloth/water)</dd>
           </dl>
         </article>
@@ -177,7 +191,7 @@
         <dl class="spec">
           <dt>Wattage</dt><dd>Headroom for GPU spikes and wattage for future upgrades</dd>
           <dt>Efficiency</dt><dd>80+ Bronze/Silver/Gold/Platinum</dd>
-          <dt>Cables</dt><dd>Modular preferred; new GPUs may need 12VHPWR</dd>
+          <dt>Cables</dt><dd>Modular preferred; new GPUs may need 12VHPWR or 12V-2x6</dd>
         </dl>
       </article>
     </section>
@@ -200,7 +214,7 @@
         <h3>Network</h3>
         <img class="card-img" src="Images/network.jpg" alt="Wi-Fi antennas connected to motherboard IO" loading="lazy" width="800" height="450">
         <dl class="spec">
-          <dt>Ethernet</dt><dd>10/100/Gigabite or 10Gigabit preffered</dd>
+          <dt>Ethernet</dt><dd>10/100/1000 (1GbE), 2.5/5/10GbE</dd>
           <dt>Wi-Fi</dt><dd>802.11ac/ax (Wi-Fi 5/6/6E/7) via M.2 Key E or PCI</dd>
           <dt>Bluetooth</dt><dd>BT 5.x for peripherals</dd>
         </dl>
@@ -213,7 +227,7 @@
           <h3>Form Factor</h3>
           <img class="card-img" src="Images/case.jpg" alt="SFF(mITX) PC case" loading="lazy" width="800" height="450">
           <dl class="spec">
-            <dt>Cases</dt><dd>ATX / mATX / ITX / mITX: size dictates airflow & GPU length</dd>
+            <dt>Cases</dt><dd>ATX|mATX|ITX|mITX: size dictates airflow & GPU length</dd>
             <dt>Clearance</dt><dd>CPU cooler height, PSU length, radiator support</dd>
             <dt>Cable Mgmt</dt><dd>Improves airflow & serviceability</dd>
           </dl>
