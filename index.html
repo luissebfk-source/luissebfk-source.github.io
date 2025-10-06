@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PC Hardware</title>
+  <link rel="stylesheet" href="/CSS/Style.css">
+</head>
+
+<body>
+  <header class="menu">
+    <div class="menu__inner">
+      <div class="brand">PC HW</div>
+      <nav class="nav" id="nav">
+        <a href="#overview">Overview</a>
+        <a href="#cpu">CPU</a>
+        <a href="#gpu">GPU</a>
+        <a href="#memory">Memory</a>
+        <a href="#motherboard">Motherboard</a>
+        <a href="#storage">Storage</a>
+        <a href="#cooling">Cooling</a>
+        <a href="#power">Power</a>
+        <a href="#io">Ports & I/O</a>
+        <a href="#network">Network</a>
+        <a href="#formfactor">Form Factor</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="headline" id="overview">
+    <div class="headline__panel">
+      <h1>Computer Hardware Explained: <br> Core Components & Cards</h1>
+      <p>A quick reference to the major parts inside a computer.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section" id="cpu">
+      <div class="card-grid">
+        <article class="card">
+          <h3>CPU (Processor)</h3>
+          <img class="card-img" src="https://raw.githubusercontent.com/luissebfk-source/Imagery/master/cpu.jpg" alt="Close-up photo of a desktop CPU" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Role</dt><dd>General-purpose compute; computes binaries to run the OS, apps, game logic.</dd>
+            <dt>Key Specs</dt><dd>Cores/Threads, Base/Boost clocks, Cache, TDP.</dd>
+            <dt>Examples</dt><dd>AMD Ryzen 5 5600 | Intel Core i5-12400F</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h3>Practical Notes</h3>
+          <img class="card-img" src="Images/cpu-notes.jpg" alt="CPU installation with socket and cooler guidance" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Socket</dt><dd>AMX / LGAXXXX (CPU must match MB socket)</dd>
+            <dt>Use-Cases</dt><dd>Productivity, gaming, compiling, streaming.</dd>
+            <dt>Bottlenecks</dt><dd>Pair appropriately with GPU to avoid CPU-bound frames.</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="gpu">
+      <div class="card-grid">
+        <article class="card">
+          <h3>GPU (Graphics Card)</h3>
+          <img class="card-img" src="Images/gpu.jpg" alt="Discrete graphics card with triple fans" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Role</dt><dd>Parallel processing for graphics, AI, compute.</dd>
+            <dt>Key Specs</dt><dd>VRAM, CUDA/Stream processors(Nvenc), Boost clock, TBP, SLI.</dd>
+            <dt>Examples</dt><dd>NVIDIA GTX/RTX/Quadro Series | AMD RX/Pro | iGPU (APU)</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h3>Display Outputs</h3>
+          <img class="card-img" src="Images/gpu-outputs.jpg" alt="GPU backplate showing HDMI and DisplayPort outputs" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Common</dt><dd>HDMI 2.1, DisplayPort 1.4/2.1</dd>
+            <dt>Notes</dt><dd>Match refresh rate & resolution; <br>check PSU headroom and cable version.</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="memory">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Memory (RAM)</h3>
+          <img class="card-img" src="Images/ram.jpg" alt="Two DIMMs of DDR RAM installed" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Type</dt><dd>DDR3 / DDR4 / DDR5</dd>
+            <dt>Capacity</dt><dd>Typical 16-32GB for gaming/media creation 64-128GB for Workstations</dd>
+            <dt>Speed</dt><dd>example DDR4-3200mhz, DDR5-6000mhz (check CPU compatibility)</dd>
+            <dt>Channels</dt><dd>Dual-channel (2 sticks) recommended for XMP/EXPO</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h3>Tuning</h3>
+          <img class="card-img" src="Images/ram-tuning.jpg" alt="BIOS screenshot for XMP/EXPO memory profile" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Profiles</dt><dd>XMP/EXPO for rated speeds</dd>
+            <dt>Latency</dt><dd>Lower CAS timing helps but stability first</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="motherboard">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Motherboard</h3>
+          <img class="card-img" src="Images/motherboard.jpg" alt="ATX motherboard laid out on a desk" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Chipset</dt><dd>Determines features (PCIe lanes, Overclock possiblity, USB bus speeds)</dd>
+            <dt>Socket</dt><dd>Must match CPU (AMX, LGAXXXX, etc.)</dd>
+            <dt>Form Factors</dt><dd>ATX, mATX, ITX</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h3>Expansion</h3>
+          <img class="card-img" src="Images/expansion.jpg" alt="PCIe slots and M.2 heatsinks close-up" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>PCIe</dt><dd>x16 for GPU, x1/x4 for cards</dd>
+            <dt>M.2</dt><dd>Can be NVMe or a Wi-Fi card, external dGPU's is possible on laptops using an adapter</dd>
+            <dt>Rear I/O</dt><dd>PS-2, USB-C/A, Audio, 2.5G LAN, Wi-Fi antennas</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="storage">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Storage</h3>
+          <img class="card-img" src="Images/storage.jpg" alt="NVMe SSD and 2.5-inch SATA SSD side by side" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>NVMe SSD</dt><dd>Fast OS/apps; PCIe Gen3/4/5</dd>
+            <dt>SATA SSD/HDD</dt><dd>Bulk storage & archives</dd>
+            <dt>Best Practice</dt><dd>OS on NVMe + secondary drive for projects/documents/images/videos/general backups & games</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h3>Backup</h3>
+          <img class="card-img" src="Images/backup.jpg" alt="External drive and NAS illustrating backup strategy" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Local</dt><dd>External HDD/SSD, zIP Disks, tape, NAS</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="cooling">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Cooling</h3>
+          <img class="card-img" src="Images/cooling.jpg" alt="Tower air cooler mounted on CPU" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>CPU Coolers</dt><dd>Air (tower) or AIO liquid (CPU slot dependent)</dd>
+            <dt>Case Airflow</dt><dd>Front intake → rear/top exhaust, many configurations possible</dd>
+            <dt>Thermals</dt><dd>Keep CPU/GPU under sustained limits for better performance and duration</dd>
+          </dl>
+        </article>
+        <article class="card">
+          <h3>Acoustics</h3>
+          <img class="card-img" src="Images/acoustics.jpg" alt="Case fans for quiet airflow" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Fan Curves</dt><dd>Balance noise vs temps</dd>
+            <dt>Dust</dt><dd>Filters & periodic cleaning(For filter use brush, or wash with damp cloth/water)</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="power">
+      <article class="card">
+        <h3>Power Supply (PSU)</h3>
+        <img class="card-img" src="Images/psu.jpg" alt="Modular ATX power supply with cables" loading="lazy" width="800" height="450">
+        <dl class="spec">
+          <dt>Wattage</dt><dd>Headroom for GPU spikes and wattage for future upgrades</dd>
+          <dt>Efficiency</dt><dd>80+ Bronze/Silver/Gold/Platinum</dd>
+          <dt>Cables</dt><dd>Modular preferred; new GPUs may need 12VHPWR</dd>
+        </dl>
+      </article>
+    </section>
+
+
+    <section class="section" id="io">
+      <article class="card">
+        <h3>Ports & I/O</h3>
+        <img class="card-img" src="Images/io.jpg" alt="Motherboard rear I/O panel with USB, HDMI, LAN" loading="lazy" width="800" height="450">
+        <dl class="spec">
+          <dt>Front</dt><dd>USB-C/A, Audio combo</dd>
+          <dt>Rear</dt><dd>USB-C/A (Gen 2/2x2), HDMI/DP (iGPU dependent), RJ-45</dd>
+          <dt>Internal</dt><dd>Headers for USB, RGB, Fans, Audio</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="section" id="network">
+      <article class="card">
+        <h3>Network</h3>
+        <img class="card-img" src="Images/network.jpg" alt="Wi-Fi antennas connected to motherboard IO" loading="lazy" width="800" height="450">
+        <dl class="spec">
+          <dt>Ethernet</dt><dd>10/100/Gigabite or 10Gigabit preffered</dd>
+          <dt>Wi-Fi</dt><dd>802.11ac/ax (Wi-Fi 5/6/6E/7) via M.2 Key E or PCI</dd>
+          <dt>Bluetooth</dt><dd>BT 5.x for peripherals</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section class="section" id="formfactor">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Form Factor</h3>
+          <img class="card-img" src="Images/case.jpg" alt="SFF(mITX) PC case" loading="lazy" width="800" height="450">
+          <dl class="spec">
+            <dt>Cases</dt><dd>ATX / mATX / ITX / mITX: size dictates airflow & GPU length</dd>
+            <dt>Clearance</dt><dd>CPU cooler height, PSU length, radiator support</dd>
+            <dt>Cable Mgmt</dt><dd>Improves airflow & serviceability</dd>
+          </dl>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>Luis Romeo Segura - Åssiden VGS.</footer>
+
+  <script>
+    const links = [...document.querySelectorAll('.nav a')];
+    const ids = links.map(a => a.getAttribute('href'));
+    const secs = ids.map(id => document.querySelector(id));
+    const onScroll = () => {
+      const y = scrollY + 120;
+      let curr = ids[0];
+      secs.forEach((s, i) => { if (s && s.offsetTop <= y) curr = ids[i]; });
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === curr));
+    };
+    onScroll();
+    addEventListener('scroll', onScroll, { passive: true });
+  </script>
+</body>
+</html>
